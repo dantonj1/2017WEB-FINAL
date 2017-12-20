@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Players
+                </div>
+                <ul class="list-group list-group-flush" id="players">
+                    <li *ngFor="let x of room.players; index as i" class="list-group-item">
+                        <img [src]="x.picture" style="width: 26px;" class="rounded" />
+                        <span *ngIf="i == room.dealer" class="badge badge-info">dealer</span>
+                        {{x.name}}
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        
+    </div>
+</div>
